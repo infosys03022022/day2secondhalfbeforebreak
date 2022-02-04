@@ -1,0 +1,49 @@
+/* Whenever we design a class we have two things:
+*  Member variables
+*  Member methods
+** method naming convention , if a method is with single word , entire word in smallcase.
+** method consist of multiple words the first word will be in smallecase, rest of the words
+   will have the first character in uppercase and rest of the character in lowercase.
+   Same concept goes for variable also. */
+/*
+ */
+
+    /*
+     *   private members are accessible within the class only
+     *   public can be accessed from any other class ( The other
+     *   class can be in the same package or different package)
+     *   access specifiers:
+     *    private
+     *    default ( when we are not writing anything before 
+     *    the member variable or member methods)
+     *      int employeeId;
+     *      int employeeBasic;
+     *      void setData()  {}
+     *      void displayData() {}
+     *      protected ---> protected members are accessed by the derived class
+     *      public -------> public cn be access from anywhere
+     */
+  package infosys.day2.demo.classobject;
+
+  public class Employee4 {
+    private int employeeId;
+    private int employeeBasic;  // id and basic are member variables of Employee class
+
+  // setData() and displayData() are member methods of Employee class
+   
+    public void setData(int id, int basic){
+      // In the below lines to the member variable we are assigning
+    // the value from the method parameters
+    	employeeId=id;
+      employeeBasic=basic;
+      //displayData();  // In this approach setData is calling displayData but not a good prctice
+     }
+ 
+    public void displayData(){
+     System.out.println(employeeId);
+     System.out.println(employeeBasic);
+     }
+  
+  }   
+         
+ 
